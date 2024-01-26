@@ -4,8 +4,7 @@ from langserve import add_routes
 
 app = FastAPI()
 
-from pirate_speak.chain import chain as pirate_speak_chain
-from csv_agent import agent_executor as csv_agent_chain
+
 
  
 
@@ -15,8 +14,7 @@ async def redirect_root_to_docs():
 
 
 # Edit this to add the chain you want to add
-add_routes(app, pirate_speak_chain, path="/pirate-speak")
-add_routes(app, csv_agent_chain, path="/csv-agent")
+
 
 if __name__ == "__main__":
     import uvicorn
